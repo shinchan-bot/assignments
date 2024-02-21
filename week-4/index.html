@@ -7,19 +7,32 @@
     let todoState = [];
     let oldTodoState = [];
 
-    function addTodoToDom() {
-      
+    function addTodoToDom(todo) {
+      let parent = document.getElementById("todos");
+      let child = document.createElement("div");
+      child.setAttribute("id", todo.id);
+      let grandChild1 = document.createElement("div");
+      grandChild1.innerHTML = todo.title;
+      let grandChild2 = document.createElement("div");
+      grandChild2.innerHTML = todo.description;
+      child.appendChild(grandChild1);
+      child.appendChild(grandChild2);
+      parent.appendChild(child);
     }
 
     function removeTodoFromDom(todo) {
-      
+      let element = document.getElementById(todo.id);
+      element.parent.removeChild(element);
     }
 
     function updateTodoInDom(oldTodo, newTodo) {
-        
+        let element = document.getElementById(oldTodo);
+        element.title = newTodo.title;
+        element.description = newTodo.description;
     }
 
     function updateState(newTodos) {
+      
       // calculate the diff b/w newTodos and oldTodos.
       // More specifically, find out what todos are - 
       // 1. added
@@ -28,10 +41,53 @@
       const added = [];
       const deleted = [];
       const updated = [];
+
+      // newTodos.forEach(elementNew => {
+      //   let elementFound = false;
+      //   console.log("1loop  - >", elementNew)
+      //   oldTodoState.forEach(elementOld => {
+      //     if(elementNew.id == elementOld.id ){
+      //       console.log({elementOld, elementNew})
+      //       elementFound = true;
+      //       if(elementNew.title != elementOld.title || elementNew.description != elementOld.description){
+      //         updated.push(elementNew);
+      //       }
+      //     }
+      //   });
+      //   console.log(elementFound)
+      //   if(!elementFound){
+      //     added.push(elementNew);
+      //   }
+      // });
+
+      
+
+      // oldTodoState.forEach(elementOld => {
+      //   if(elementOld.id == newTodos.id){
+      //     added.push(newTodos);
+      //   }
+      // });
+      // console.log("Added", added);
+      // console.log("Deleted", deleted);
+      // console.log("Updated", updated );
+
+      // updated.forEach(element => {
+      //   updateTodoInDom(element.id,element);
+      // });
+      // added.forEach(element => {
+      //   addTodoToDom(element);
+      // });
+      // deleted.forEach(element => {
+      //   removeTodoFromDom(element);
+      // });
       // calculate these 3 arrays
       // call addTodo, removeTodo, updateTodo functions on each of the
       // elements
+      console.log(todoState)
+      console.log("Old todo state --> ", oldTodoState)
       oldTodoState = newTodos;
+      console.log(todoState)
+      console.log("Old todo state --> ", oldTodoState)
     }
 
     function addTodo() {
@@ -42,6 +98,7 @@
         description: description,
         id: globalId++,
       })
+      
       updateState(todoState);
     }
   </script>

@@ -1,0 +1,15 @@
+#App{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 100%;
+}
+#add-button{
+  width: 10%;
+  height: 10%;
+  background-color: rgb(252, 189, 108);
+  border: rgb(252, 189, 108);
+  border-radius: 2px;
+  padding: 5px;
+}

@@ -12,7 +12,10 @@ export const Assignment3 = () => {
     ]);
 
     // Your code starts here
-    const totalValue = 0;
+    let totalValue = 0;
+    useMemo(()=> {
+        items.map(item => {totalValue+=item.value});
+    },[items]);
     // Your code ends here
     return (
         <div>

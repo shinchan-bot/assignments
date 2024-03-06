@@ -1,0 +1,21 @@
+#ColorPalette{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 60%;
+    height: 8vh;
+    margin-left: 20%;
+    margin-top: 70vh;
+    border-radius: 20px;
+    box-shadow: 10px 10px 15px 1px #888888;
+    background: white;
+
+}
+
+button{
+    height: 70%;
+    width:12%;
+    border-radius: 15px;
+    border-style: none;
+}

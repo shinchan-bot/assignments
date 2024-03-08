@@ -1,0 +1,35 @@
+#ParagraphGenerator{
+    font-family:Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#ParagraphGenerator > div{
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#ParagraphGenerator > div > input{
+    width: 60%;
+    height: 5vh;
+    font-size: 15px;
+    border: 1px solid rgb(158, 158, 158);
+}
+
+#ParagraphGenerator > div > button{
+    height: 6vh;
+    border-style: none;
+    color: white;
+    background-color: black;
+    margin-left: 10px;
+}
+
+#ParagraphGenerator > div > p{
+    padding: 10px;
+    margin-top: 10px;
+}
+

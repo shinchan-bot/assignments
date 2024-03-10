@@ -1,0 +1,49 @@
+#LoginOTP{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 1px solid green;
+    border-radius: 50px;
+    width: 50vh;
+    height: 50vh;
+    margin-left: 35vw;
+    margin-top: 20vh;
+    color: white;
+    background-color: black;
+
+}
+
+#BoxOTP{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 40%;
+    
+}
+
+#BoxOTP > button{
+    width: 100px;
+    height: 40px;
+    color: white;
+    background-color: black;
+    border: 1px solid white;
+
+}
+
+#BoxOTP > input{
+    width: 100%;
+    height: 50px;
+    font-size:medium;
+    padding-left: 10px;
+    color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: black;
+}
+
+#OtpInput{
+    border: 2px solid orange;
+}

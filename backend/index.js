@@ -4,6 +4,7 @@ const dotenv = require("dotenv")
 const cors = require('cors')
 
 const userRouter = require('./routes/user');
+const accountRouter = require('./routes/account');
 
 dotenv.config();
 
@@ -13,6 +14,7 @@ app.use(cors())
 app.use(bodyParser.json());
 
 app.use("/user", userRouter);
+app.use("/account", accountRouter);
 
 app.use('/', (req, res) => {
     res.send("Server root")

@@ -38,7 +38,7 @@ const userAuth = async (req, res, next) => {
             email,password
         })
         if(result){
-            req.body.id = result.id.toString();
+            req.id = result.id.toString();
             next();
         }else{
             res.status(411).json({
